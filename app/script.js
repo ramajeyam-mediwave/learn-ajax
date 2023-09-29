@@ -18,7 +18,7 @@ loadingIndicator.hide();
 function populateDropdown(dogBreeds) {
 const dropdown = $("#breedDropdown");
 dropdown.empty();
-dropdown.append('<option value="">Select a breed</option>');
+dropdown.append('<option value="" disabled selected>Select a breed</option>');
 
 for (let i = 0; i < dogBreeds.length; i++) {
   const breed = dogBreeds[i];
@@ -55,7 +55,7 @@ $.ajax(url, {
    });
 
 }
-//The code snippet defines a function called getRandomImageOfDog that takes a dog breed as input and makes an AJAX GET request to the dog API to retrieve a random image of a dog of that breed.
+
 function getRandomImageOfDog(dogBreed) {
 const url = `https://dog.ceo/api/breed/${dogBreed}/images/random`;
 showLoading(); 
